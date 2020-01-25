@@ -1,0 +1,30 @@
+::selection
+  background: $primary
+  color: $white
+
+*
+  box-sizing: border-box
+
+::placeholder
+  color: $dark
+  opacity: 0.3
+
+  &:focus
+    outline: 0
+
+html
+  direction: $dir
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+  font-weight: $font-weight-normal
+
+a
+  color: $link
+  cursor: pointer
+  text-decoration: none
+
+  &:hover
+    color: $link-hover
+
+img
+  max-width: 100%
+  height: auto

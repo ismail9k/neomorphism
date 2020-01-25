@@ -1,0 +1,40 @@
+/**
+ * Variables
+ */
+
+
+$header-1 ?= $font-size[8]
+$header-2 ?= $font-size[7]
+$header-3 ?= $font-size[6]
+$header-4 ?= $font-size[5]
+$header-5 ?= $font-size[4]
+$header-6 ?= $font-size[3]
+
+$header-defaults
+  margin-top: 0
+  margin-bottom: 0.5em
+  line-height: $lineheight
+  font-weight: $font-weight-semi-bold
+
+/**
+ * Elements
+ */
+
+for $n in (1..6)
+  h{$n}, .h{$n}
+    font-size: lookup('$header-' + $n)
+    @extends $header-defaults
+
+for $n in (1..3)
+  h{$n}, .h{$n}
+    &:not(:first-child)
+      margin-top: 1em
+
+for $n in (1..4)
+  .display-{$n}
+    font-size: lookup('$display-' + $n)
+    &:not(:first-child)
+      margin-top: 1em
+
+p, html
+  font-size: $font-md

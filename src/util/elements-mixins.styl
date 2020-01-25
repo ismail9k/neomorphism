@@ -1,0 +1,93 @@
+/**
+ * styling mixins
+ */
+
+
+_button-color(accent, text)
+  &.is-outlined
+  &.is-bright
+  &.is-clean:hover
+  &.is-clean:active
+  &.is-clean.is-active
+    color: accent
+  &.is-outlined
+    border-color: accent  
+  &.is-bright
+    background-color: lighten(accent, 85%)
+  &:hover
+  &:active
+  &.is-active
+    background-color: darken(accent, 15%)
+    color: text
+  &:focus:not(:active)
+    box-shadow: 0 0 0 $outline alpha(accent, $outline-opacity)
+  &
+  &.is-disabled
+  &[disabled]
+    background-color: accent
+    color: text
+
+_file-color(accent, text)
+  &
+    background-color: accent
+    color: text
+
+_alert-color(accent, text)
+  &.is-outlined
+  &.is-bright
+    color: accent
+  &.is-outlined
+    border-color: accent
+  &.is-bright
+    background-color: lighten(accent, 85%)
+  &
+    background-color: accent
+    color: text
+  
+_button-grad(grad, text)
+  background-image: linear-gradient($grad-direction, grad[0], grad[1])
+  color: text
+
+
+_textarea-color(primary, secondary = primary)
+  border-color: primary 
+  &:focus
+    border-color: darken(secondary, 15%)
+    box-shadow: 0 0 0 $outline alpha(secondary, $outline-opacity)
+
+_input-color(primary, secondary = primary)
+  border-color: primary 
+  &:focus
+    border-color: darken(secondary, 15%)
+    box-shadow: 0 0 0 $outline alpha(secondary, $outline-opacity)
+
+_select-color(primary, secondary)
+  border-color: primary
+  color: secondary
+  .select-label,
+  .select-item.is-selected,
+  .select-childItem.is-selected
+    background-color: secondary
+    color: $white
+  .select-item:not(.is-group):hover,
+  .select-childItem:hover
+    background-color: darken(secondary, 15%)
+    color: $white
+  &:focus
+    border-color: darken(primary, 15%)
+    box-shadow: 0 0 0 $outline alpha(primary, $outline-opacity)
+
+
+_modal-color(accent, textColor)
+  background-color: lighten(accent, 85%)
+  color: textColor
+  &.is-outline
+    border-color: accent
+    color: accent
+  &:focus
+    border-color: accent
+    box-shadow: 0 0 0 $outline alpha(accent, $outline-opacity)
+
+_label-color(accent, textColor)
+  background-color: accent
+  color: textColor

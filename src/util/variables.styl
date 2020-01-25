@@ -1,0 +1,75 @@
+$font-size = (12px 14px 16px 18px 20px 24px 28px 32px 42px 48px 54px 60px 68px 76px)
+
+/**
+ * font and elements sizes
+ */
+$font-xs ?= rem($font-size[0])
+$font-sm ?= rem($font-size[1])
+$font-md ?= rem($font-size[2])
+$font-lg ?= rem($font-size[3])
+$font-xl ?= rem($font-size[4])
+
+
+/**
+ * Device Breakpoint
+ */
+$screen-xs ?= 0
+$screen-sm ?= 768px
+$screen-md ?= 991px
+$screen-lg ?= 1360px
+$screen-xl ?= 1920px
+
+/**
+ * container sizes
+ */
+$container-mobile ?= 100%
+$container-tablet ?= $screen-sm - (22 * 2)
+$container-desktop ?= $screen-md - (22 * 3)
+$container-widescreen ?= $screen-lg - (22 * 4)
+$container-ultrawide ?= $screen-xl - (22 * 5)
+
+/**
+ * typography
+ */
+$lineheight ?= 1.1875
+$font-weight-light ?= 300
+$font-weight-normal ?= 400
+$font-weight-medium ?= 500
+$font-weight-semi-bold ?= 600
+$font-weight-bold ?= 700
+$font-weight-heavy ?= 800
+$font-weight-super ?= 900
+
+/**
+ * grid
+ */
+$columns ?= 12
+$dir ?= ltr
+$gutter ?= rem(10px)
+$gutter-full ?= 8vw
+$round-digits ?= 4
+/*
+ * style
+ */
+$margin ?= 0.5em
+$padding ?= 0.5em
+$padding-px ?= 20px
+$modal-spacing ?= 2em
+$border-radius ?= 4px
+$border-radius-large ?= 8px
+$border ?= 1px
+$outline ?= 3px
+$outline-opacity ?= 25%
+$element-lineheight ?= 1.3
+/**
+ * transition
+ */
+$transition-time ?= 0.2s
+$transition-function ?= ease-in-out
+/**
+ * modifiers
+ */
+$modifiers-size ?= 'xs' 'sm' 'md' 'lg' 'xl'
+$modifiers-style ?= 'block' 'disabled' 'rounded'
+$modifiers-color ?= 'dark' 'light'
+$modifiers-color-grad ?= 'primary' 'secondary' 'info' 'success' 'warning' 'danger'

@@ -1,0 +1,62 @@
+/**
+ * media queries up mixins
+ */
+
+responsive-up(breakpoint)
+  @media screen and (min-width: breakpoint)
+    {block}
+
+xl-up()
+  responsive-up($screen-xl)
+
+lg-up()
+  responsive-up($screen-lg)
+
+md-up()
+  responsive-up($screen-md)
+
+sm-up()
+  responsive-up($screen-sm)
+
+xs-up()
+  responsive-up($screen-xs)
+
+/**
+ * media queries down mixins
+ */
+
+responsive-down(breakpoint)
+  @media screen and (max-width: breakpoint - 0.02px)
+    {block}
+
+xl-down()
+  responsive-down($screen-xl)
+
+lg-down()
+  responsive-down($screen-lg)
+
+md-down()
+  responsive-down($screen-md)
+
+sm-down()
+  responsive-down($screen-sm)
+
+xs-down()
+  responsive-down($screen-xs)
+
+/**
+ * sizes modifier mixin
+ */
+
+generate-sizes()
+  &.is-xs
+    font-size: $font-xs
+  &.is-sm
+    font-size: $font-sm
+  &,
+  &.is-md
+    font-size: $font-md
+  &.is-lg
+    font-size: $font-lg
+  &.is-xl
+    font-size: $font-xl

@@ -1,0 +1,34 @@
+{
+  "name": "neomorphism",
+  "version": "0.0.1",
+  "description": "UI components library in the new neomorphism design style",
+  "author": "Abdelrahman Ismail <dev@isamil9k.com>",
+  "main": "dist/neomorphism.css",
+  "style": "dist/neomorphism.css",
+  "repository": "https://github.com/ismail9k/neomorphism",
+  "scripts": {
+    "lint": "eslint ./src --fix",
+    "build": "MODE=production node scripts/styles",
+    "dev": "MODE=dev node scripts/watcher"
+  },
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "browser-sync": "^2.23.6",
+    "chalk": "^2.3.2",
+    "mkdirp": "^0.5.1",
+    "stylus": "^0.54.5",
+    "uglifycss": "0.0.29"
+  },
+  "license": "MIT",
+  "keywords": [
+    "CSS",
+    "framework",
+    "neomorphism"
+  ],
+  "maintainers": [
+    {
+      "name": "ismail9k",
+      "email": "dev@ismail9k.com"
+    }
+  ]
+}
