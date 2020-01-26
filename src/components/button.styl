@@ -51,7 +51,7 @@ _button-gradient(grad, text)
   // generate color modifiers
   for color in $modifiers-color
     $accent = lookup('$' + color)
-    $text = isLight(color) ? $black : $white
+    $text = isLight(color) ? $dark : $white
 
     &.is-{color}
       _button-color: $accent $text
