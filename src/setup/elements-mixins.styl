@@ -1,0 +1,16 @@
+/**
+ * styling mixins
+ */
+
+
+
+_modal-color(accent, textColor)
+  background-color: lighten(accent, 85%)
+  color: textColor
+  &.is-outline
+    border-color: accent
+    color: accent
+  &:focus
+    border-color: accent
+    box-shadow: 0 0 0 $outline alpha(accent, $outline-opacity)
+
