@@ -1,0 +1,48 @@
+.dropdown
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  &.is-active .dropdown-menu
+    transform: scale(1)
+
+  &.is-right
+    align-items: flex-end
+    .dropdown-menu
+      transform-origin: top right
+
+  &.is-center
+    align-items: center
+    .dropdown-menu
+      transform-origin: top center
+
+.dropdown-toggle.button
+  marign: 0
+
+.dropdown-item
+  display: block
+  padding: $padding (2 * $padding)
+  color: $dark
+  &:hover
+    color: $primary
+  &.is-active,
+  &:focus,
+  &:active
+    color: $white
+    background-color: $primary
+
+.dropdown-menu
+  display: flex
+  flex-direction: column
+  padding: $padding 0
+  max-width: 250px
+  border-radius: $border-radius
+  background-color: $light
+  color: $dark
+  transform-origin: top left
+  user-select: none
+  margin: 0
+  transform: scale(0)
+  box-shadow: $shadow-lg, $shadow-emboss
+  &:empty
+    display: none
