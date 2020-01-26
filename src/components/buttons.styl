@@ -5,6 +5,8 @@
   margin-bottom: $margin
   box-shadow: $shadow-md, $shadow-emboss
   border-radius: $border-radius
+  &:not(:last-child)
+    margin-right: $margin
 
   >:not(:last-child), >.is-rounded:not(:last-child), &.is-rounded >:not(:last-child)
     border-top-right-radius: 0

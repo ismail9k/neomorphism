@@ -1,12 +1,11 @@
 .radio
-  margin: $margin
+  margin-right: $margin
   display: flex
   align-items: center
   cursor: pointer
   color: $dark
   &.is-inline
     display: inline-flex
-    margin-right: 0.8em
   &.is-disabled
   &[disabled]
     opacity: 0.6
@@ -26,7 +25,7 @@
   background-color: $white
   cursor: pointer
   outline: none
-  box-shadow: $shadow-md, $shadow-emboss
+  box-shadow: $shadow-sm, $shadow-emboss
   background-color: $light
   appearance: none
   -webkit-appearance: none
@@ -40,7 +39,7 @@
     background-color: $white
     content: ''
   &:focus
-    box-shadow: $shadow-md, $shadow-emboss, $shadow-outline
+    box-shadow: $shadow-sm, $shadow-emboss, $shadow-outline
   &:checked
   &.is-checked
     background-color: $primary

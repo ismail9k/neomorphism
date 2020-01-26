@@ -1,0 +1,49 @@
+_input-color(primary, secondary = primary)
+  border-color: primary 
+
+.input
+  margin-bottom: $margin
+  padding: $padding ($padding * 1.5)
+  width: 100%
+  outline: none
+  border-width: $border
+  border-style: solid
+  border-radius: $border-radius
+  background-color: $light
+  line-height: $element-lineheight
+  box-shadow: $shadow-sm, $shadow-emboss
+  -webkit-appearance: none
+  -moz-appearance: none
+  _input-color: $light $dark
+  &:focus
+    z-index: 1
+    box-shadow: $shadow-sm, $shadow-emboss, $shadow-outline
+
+
+  // generate size modifiers
+  generate-sizes()
+
+  // generate color modifiers
+  for color in $modifiers-color
+    $color = lookup('$' + color)
+    &.is-{color}
+      _input-color: $color
+
+  &.is-block
+    width: 100%
+
+  &.is-rounded
+    border-radius: 10em
+
+  &.is-bold
+    border-width: 2px
+  &:disabled,
+  &.is-disabled
+    cursor: not-allowed
+    background: $gray
+
+  &.is-disabled
+    pointer-events: none
+
+  &[type="color"]
+    padding: 0

@@ -1,0 +1,37 @@
+_textarea-color(primary, secondary = primary)
+  border-color: primary 
+
+.textarea
+  display: block
+  margin-bottom: $margin
+  padding: $padding
+  min-width: 100%
+  max-width: 100%
+  outline: none
+  border-width: $border
+  border-style: solid
+  border-radius: $border-radius
+  background-color: $light
+  box-shadow: $shadow-sm, $shadow-emboss
+  line-height: 1.2
+  _textarea-color: $light $dark
+
+  &:focus
+    box-shadow: $shadow-sm, $shadow-emboss, $shadow-outline
+
+  // generate size modifiers
+  generate-sizes()
+
+  // generate color modifiers
+  for color in $modifiers-color
+    $color = lookup('$' + color)
+    &.is-{color}
+      _textarea-color: $color
+
+  &:disabled, &.is-disabled
+    cursor: not-allowed
+    background: $gray
+    color: $white
+    pointer-events: none
+
+
