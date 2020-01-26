@@ -16,7 +16,3 @@ node_modules/
 
 # macOS folder icon
 Icon/
-
-# dit folders
-dist
-*/**/dist
