@@ -1,0 +1,55 @@
+.progress
+  position: relative
+  height: 1.2em
+  width: 100%
+  background-color: $light
+  border-radius: 10em
+  margin-bottom: 2em
+  font-size: $font-xs
+  box-shadow: $shadow-deboss
+  border: 1px solid alpha($white, 10%)
+
+.progress-icon
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 1
+  border-radius: 10em
+  padding: $padding
+  width: 3em
+  height: 3em
+  color: $dark
+  background-color: $light
+  box-shadow: $shadow-md, $shadow-emboss
+  transform: translateY(-0.9em)
+
+  // generate color modifiers
+  for color in $modifiers-color
+    $accent = lookup('$' + color)
+    $text = isLight(color) ? $black : $white
+    &.is-{color}
+      background: $accent
+      color: $text
+
+.progress-bar
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  border-radius: 10em
+  background-color: $light
+  color: $dark
+  box-shadow: $shadow-sm, $shadow-emboss
+
+
+  // generate color modifiers
+  for color in $modifiers-color
+    $accent = lookup('$' + color)
+    $text = isLight(color) ? $black : $white
+    &.is-{color}
+      background: $accent
+      color: $text
