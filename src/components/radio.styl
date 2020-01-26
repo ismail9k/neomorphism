@@ -1,0 +1,62 @@
+.radio
+  margin: $margin
+  display: flex
+  align-items: center
+  cursor: pointer
+  color: $dark
+  &.is-inline
+    display: inline-flex
+    margin-right: 0.8em
+  &.is-disabled
+  &[disabled]
+    opacity: 0.6
+    pointer-events: none
+    cursor: not-allowed
+
+  generate-sizes()
+
+.radio-input
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 0
+  width: 1.3em
+  height: 1.3em
+  border-radius: 10em
+  background-color: $white
+  cursor: pointer
+  outline: none
+  box-shadow: $shadow-md, $shadow-emboss
+  background-color: $light
+  appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  &:after
+    display: block
+    opacity: 0
+    width: 0.5em
+    height: 0.5em
+    border-radius: 10em
+    background-color: $white
+    content: ''
+  &:focus
+    box-shadow: $shadow-md, $shadow-emboss, $shadow-outline
+  &:checked
+  &.is-checked
+    background-color: $primary
+    border-color: $primary
+    &:after
+      opacity: 1
+  &.is-disabled
+  &[disabled]
+    opacity: 0.6
+    pointer-events: none
+    cursor: not-allowed
+
+.radio-label
+  vertical-align: middle
+  margin-left: 0.4em
+
+
+input.radio
+  @extends .radio-input
