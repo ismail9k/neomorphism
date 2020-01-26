@@ -1,0 +1,72 @@
+.column
+  // we used flex basis auto to fix grid bug in ie
+  flex: 0 0 auto
+  // we used min-width with width property
+  // to stop FireFox default behavior
+  // when content is bigger than column
+  min-width: 100%
+  width: 100%
+  padding-right: $gutter
+  padding-left: $gutter
+
+  &:not([class*='is-'])
+    flex: 1 1 0
+
+  for $n in (0 .. $columns)
+    &.is-{$n},
+    &.is-xs-{$n}
+      min-width: round($n / $columns * 100%, $round-digits)
+      width: round($n / $columns * 100%, $round-digits)
+
+    &.is-offset-{$n},
+    &.is-offset-xs-{$n}
+      margin-left: round($n / $columns * 100%, $round-digits)
+
+  +sm-up()
+    for $n in (0 .. $columns)
+      &.is-sm-{$n}
+        min-width: round($n / $columns * 100%, $round-digits)
+        width: round($n / $columns * 100%, $round-digits)
+
+      &.is-offset-sm-{$n}
+        margin-left: round($n / $columns * 100%, $round-digits)
+
+  +md-up()
+    for $n in (0 .. $columns)
+      &.is-md-{$n}
+        min-width: round($n / $columns * 100%, $round-digits)
+        width: round($n / $columns * 100%, $round-digits)
+
+      &.is-offset-md-{$n}
+        margin-left: round($n / $columns * 100%, $round-digits)
+
+  +lg-up()
+    for $n in (0 .. $columns)
+      &.is-lg-{$n}
+        min-width: round($n / $columns * 100%, $round-digits)
+        width: round($n / $columns * 100%, $round-digits)
+
+      &.is-offset-lg-{$n}
+        margin-left: round($n / $columns * 100%, $round-digits)
+
+  +xl-up()
+    for $n in (0 .. $columns)
+      &.is-xl-{$n}
+        min-width: round($n / $columns * 100%, $round-digits)
+        width: round($n / $columns * 100%, $round-digits)
+
+      &.is-offset-xl-{$n}
+        margin-left: round($n / $columns * 100%, $round-digits)
+
+  &.is-middle
+    align-self: center
+
+  &.is-top
+    align-self: flex-start
+
+  &.is-bottom
+    align-self: flex-end
+
+  >.row
+    margin: 0 ($gutter * -1)
+    min-width: 'calc(100% + %s)' % ($gutter * 2)

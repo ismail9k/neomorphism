@@ -1,0 +1,69 @@
+.grid
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin-right: $gutter * -1
+  margin-left: $gutter * -1
+  width: auto
+
+  for $n in (1 .. $columns)
+    &.is-{$n}, &.is-xs-{$n}
+      >.column:not([class*='is-'])
+        @extends .column.is-{$n}
+
+  +sm-up()
+    for $n in (1 .. $columns)
+      &.is-sm-{$n}
+        >.column:not([class*='is-'])
+          @extends .column.is-sm-{$n}
+
+  +md-up()
+    for $n in (1 .. $columns)
+      &.is-md-{$n}
+        >.column:not([class*='is-'])
+          @extends .column.is-md-{$n}
+
+  +lg-up()
+    for $n in (1 .. $columns)
+      &.is-lg-{$n}
+        >.column:not([class*='is-'])
+          @extends .column.is-lg-{$n}
+
+  +xl-up()
+    for $n in (1 .. $columns)
+      &.is-xl-{$n}
+        >.column:not([class*='is-'])
+          @extends .column.is-xl-{$n}
+
+  &.is-center
+    justify-content: center
+
+  &.is-end
+    justify-content: flex-end
+
+  &.is-start
+    justify-content: flex-start
+
+  &.is-middle
+    align-items: center
+
+  &.is-top
+    align-items: flex-start
+
+  &.is-bottom
+    align-items: flex-end
+
+  &.is-vertical
+    flex-direction: column
+    align-items: flex-start
+
+  &.is-shrink
+    >.column:not([class*='is-'])
+      flex: 0 0 auto
+
+  &.is-fit
+    margin-right: 0
+    margin-left: 0
+
+    >.column
+      padding: 0
