@@ -2,6 +2,7 @@ _input-color(primary, secondary = primary)
   border-color: primary 
 
 .input
+  display: block
   margin-bottom: $margin
   padding: $padding ($padding * 1.5)
   width: 100%
@@ -11,14 +12,12 @@ _input-color(primary, secondary = primary)
   border-radius: $border-radius
   background-color: $light
   line-height: $element-lineheight
-  box-shadow: $shadow-sm, $shadow-emboss
-  -webkit-appearance: none
-  -moz-appearance: none
+  box-shadow: $shadow-deboss
   _input-color: $light $dark
+
   &:focus
     z-index: 1
-    box-shadow: $shadow-sm, $shadow-emboss, $shadow-outline
-
+    box-shadow: $shadow-deboss, $shadow-outline
 
   // generate size modifiers
   generate-sizes()
@@ -45,5 +44,11 @@ _input-color(primary, secondary = primary)
   &.is-disabled
     pointer-events: none
 
-  &[type="color"]
-    padding: 0
+
+input
+  &:-webkit-autofill
+    background-color: $light !important
+
+  &:-webkit-autofill
+    -webkit-text-fill-color: $dark !important
+

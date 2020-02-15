@@ -1,6 +1,8 @@
 _button-color(accent, text)
   background-color: accent
   color: text
+  &:hover
+    background-color: lighten(accent, 30%)
 
 _button-gradient(grad, text)
   background-image: linear-gradient($grad-direction, grad[0], grad[1])
@@ -26,7 +28,7 @@ _button-gradient(grad, text)
   cursor: pointer
   line-height: $element-lineheight
   box-shadow: $shadow-md, $shadow-emboss
-  transition: $transition-time $transition-function
+  transition: $transition-time ease-in-out
   _button-color: $light $dark
 
   &:not(:last-child)
