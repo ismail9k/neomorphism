@@ -11,7 +11,8 @@
     "build": "MODE=production node scripts/styles",
     "dev": "MODE=dev node scripts/watcher",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "bash scripts/docs-deploy.sh"
   },
   "devDependencies": {
     "autoprefixer-stylus": "^0.14.0",
