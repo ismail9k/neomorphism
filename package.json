@@ -33,5 +33,8 @@
       "name": "ismail9k",
       "email": "dev@ismail9k.com"
     }
-  ]
+  ],
+  "dependencies": {
+    "prism": "^4.1.2"
+  }
 }
