@@ -1,12 +1,11 @@
 <template>
   <div class="snippeter">
     <div ref="source" v-show="false"><slot></slot></div>
-    <div class="snippeter__element">
-      <div ref="element" v-html="element"></div>
-    </div>
-    <div class="snippeter__markup">
-      <pre ref="markup" class="language-html"><code>{{ markup }}</code></pre>
-    </div>
+    <div class="snippeter__element" ref="element" v-html="element"></div>
+    <pre
+      ref="markup"
+      class="snippeter__markup language-html"
+    ><code>{{ markup }}</code></pre>
   </div>
 </template>
 
@@ -48,15 +47,14 @@ export default {
 
 .snippeter__element
   display: flex
-  padding: 20px
+  padding: 30px
   justify-content: center
+  >*:not(#important)
+    margin-bottom: 0
 
-.snippeter__markup
-  margin 20px
-  >*
-    margin: 0
-  pre
-    box-shadow: inset -2px -2px 4px rgba(255,255,255,0.2)
-    max-height: 300px
-    overflow: auto
+pre.snippeter__markup:not(#important)
+  margin 0 20px 20px
+  box-shadow: inset -2px -2px 4px rgba(255,255,255,0.2)
+  max-height: 300px
+  overflow: auto
 </style>
