@@ -16,7 +16,7 @@ Button markup
 
 ## Using icons
 
-Adding icons to buttons
+Adding icons to a _button_
 
 <snippeter>
 <pre>

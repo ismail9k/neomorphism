@@ -20,14 +20,13 @@ _navbar_ markup
 <snippeter>
 <pre>
 <header class="navbar">
-  <a href="#" class="navbar-brand">
+  <a href="https://ismail9k.com" class="navbar-brand">
     Ismail9k_
   </a>
   <div class="navbar-start">
     <a class="navbar-item">Home</a>
     <a class="navbar-item">About</a>
     <a class="navbar-item">Company</a>
-    <a class="navbar-item">More</a>
   </div>
   <div class="navbar-end">
     <a class="navbar-item">
@@ -44,3 +43,9 @@ _navbar_ markup
 </header>
 </pre>
 </snippeter>
+
+<style>
+.snippeter .navbar {
+  position: static;
+}
+</style>

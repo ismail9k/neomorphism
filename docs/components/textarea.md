@@ -1,4 +1,4 @@
-# Input
+# Textarea
 
 A _textarea_ component is used to get a multi-line text from the user
 

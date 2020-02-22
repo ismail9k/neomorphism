@@ -1,6 +1,6 @@
-# Button
+# Buttons
 
-Buttons component is group multiple buttons together
+A _buttons_ component is group multiple buttons together
 
 ## Basic Use
 

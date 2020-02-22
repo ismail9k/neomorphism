@@ -1,4 +1,4 @@
-# Modal
+# Table
 
 A _table_ component is use to display a tableau data
 

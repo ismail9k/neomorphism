@@ -34,7 +34,7 @@ module.exports = {
           {
             title: 'Components',
             collapsable: false,
-            sidebarDepth: 1,
+            sidebarDepth: 0,
             children: getComponents(),
           },
         ],
@@ -43,7 +43,6 @@ module.exports = {
   },
 };
 
-console.log(getComponents());
 function getComponents() {
   return [
     'alert',

@@ -24,7 +24,7 @@ _switcher_ markup
 
 ## Sizes
 
-Checkbox sizes modifiers
+_switcher_ sizes modifiers
 
 - `.is-xs`
 - `.is-sm`
