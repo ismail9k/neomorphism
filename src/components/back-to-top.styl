@@ -1,0 +1,30 @@
+.back-to-top
+    padding $padding-xxl
+    box-shadow $shadow-sm, $shadow-emboss
+    width $width-lg
+    height $width-lg
+    display flex
+    align-items: center 
+    justify-content: center
+    cursor pointer
+    border-radius 32px
+    position relative
+    background $light
+    z-index 999
+    &:hover
+        box-shadow $shadow-xl, $shadow-deboss
+    &:active 
+        box-shadow $shadow-xl, $shadow-outline
+    .back-to-top-text
+        color $link
+    .back-to-top-icon
+        color $link
+
+.left
+    position fixed
+    bottom 5%
+    left 5%
+.right
+    position fixed
+    bottom 5%
+    right 5%
