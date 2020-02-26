@@ -1,6 +1,6 @@
 {
   "name": "neomorphism",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UI components library in the new neomorphism design style",
   "author": "Abdelrahman Ismail <dev@isamil9k.com>",
   "main": "dist/neomorphism.css",
