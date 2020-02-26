@@ -31,8 +31,9 @@ If you want a quick start, Copy-paste the stylesheet `<link>` into your `<head>`
 If you want to contribute to the project, or add a missing feature, you can clone the project repository
 
 ```bash
-# git
+# Install
 git clone https://github.com/ismail9k/neomorphism.git
+cd neomorphism
 npm install
 
 # For development
@@ -48,7 +49,7 @@ What is included in the project repository
 
 ```
 neomorphism/
-├── neomorphism.syl
+├── neomorphism.styl
 ├── dist
 │   ├── neomorphism.css
 │   └── neomorphism.min.css
