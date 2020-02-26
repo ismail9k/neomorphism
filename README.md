@@ -13,6 +13,7 @@ yarn add neomorphism
 
 # git
 git clone https://github.com/ismail9k/neomorphism.git
+cd neomorphism
 npm install
 ```
 
