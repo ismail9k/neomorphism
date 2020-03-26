@@ -1,3 +1,0 @@
-# Structure & Concepts
-
-Coming soon...

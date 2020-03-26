@@ -1,41 +1,43 @@
 {
-  "name": "neomorphism",
-  "version": "0.0.1",
-  "description": "UI components library in the new neomorphism design style",
-  "author": "Abdelrahman Ismail <dev@isamil9k.com>",
-  "main": "dist/neomorphism.css",
-  "style": "dist/neomorphism.css",
-  "repository": "https://github.com/ismail9k/neomorphism",
+  "name": "react-neomorphism",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
   "scripts": {
-    "lint": "eslint ./src --fix",
-    "build": "MODE=production node scripts/styles",
-    "dev": "MODE=dev node scripts/watcher",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "docs:deploy": "bash scripts/docs-deploy.sh"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "autoprefixer-stylus": "^0.14.0",
-    "browser-sync": "^2.23.6",
-    "chalk": "^2.3.2",
-    "mkdirp": "^0.5.1",
-    "stylus": "^0.54.5",
-    "uglifycss": "0.0.29",
-    "vuepress": "^1.3.0"
-  },
-  "license": "MIT",
-  "keywords": [
-    "CSS",
-    "framework",
-    "neomorphism"
-  ],
-  "maintainers": [
-    {
-      "name": "ismail9k",
-      "email": "dev@ismail9k.com"
-    }
-  ],
-  "dependencies": {
-    "prism": "^4.1.2"
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/preset-create-react-app": "^2.1.1",
+    "@storybook/react": "^5.3.17"
   }
 }
