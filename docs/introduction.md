@@ -12,7 +12,7 @@ You can access this library from NPM, and include into your awesome project
 
 ```bash
 # npm
-npm install --save neomorphism
+npm i neomorphism
 
 # yarn
 yarn add neomorphism
