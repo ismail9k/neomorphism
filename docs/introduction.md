@@ -18,6 +18,14 @@ npm install --save neomorphism
 yarn add neomorphism
 ```
 
+## import css file
+
+```js
+import 'neomorphism/dist/neomorphism.css';
+```
+
+> Without this css file you can't use `neomorphism` on your project.
+
 ## Use CDNs
 
 If you want a quick start, Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
@@ -49,7 +57,7 @@ What is included in the project repository
 
 ```
 neomorphism/
-├── neomorphism.styl
+├── neomorphism.style
 ├── dist
 │   ├── neomorphism.css
 │   └── neomorphism.min.css
