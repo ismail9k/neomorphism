@@ -6,12 +6,23 @@ UI components library in the new neomorphism design style
 
 ```bash
 # npm
-npm install --save neomorphism
+npm i neomorphism
 
 # yarn
 yarn add neomorphism
+```
 
-# git
+## import css file
+
+```js
+import 'neomorphism/dist/neomorphism.css';
+```
+
+> Without this css file you can't use `neomorphism` on your project.
+
+## git
+
+```bash
 git clone https://github.com/ismail9k/neomorphism.git
 cd neomorphism
 npm install

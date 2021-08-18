@@ -12,11 +12,19 @@ You can access this library from NPM, and include into your awesome project
 
 ```bash
 # npm
-npm install --save neomorphism
+npm i neomorphism
 
 # yarn
 yarn add neomorphism
 ```
+
+## import css file
+
+```js
+import 'neomorphism/dist/neomorphism.css';
+```
+
+> Without this css file you can't use `neomorphism` on your project.
 
 ## Use CDNs
 
@@ -49,7 +57,7 @@ What is included in the project repository
 
 ```
 neomorphism/
-├── neomorphism.styl
+├── neomorphism.style
 ├── dist
 │   ├── neomorphism.css
 │   └── neomorphism.min.css
